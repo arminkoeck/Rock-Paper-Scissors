@@ -8,10 +8,14 @@
 </head>
 <body>
     <script>
-        function getComputerChoice ()
-            
-        /* Declare 3 variables Rock, Paper, Scissors */
-        /* Pick one random variable 
+        
+        function getComputerChoice () {
+            const threeChoices = ["Rock", "Paper", "Scissors"];
+            let randomChoice = Math.floor(Math.random() * threeChoices.length);
+            let computerChoice = threeChoices[randomChoice];
+            return computerChoice;
+        }
+        
     </script>
 </body>
 </html>
