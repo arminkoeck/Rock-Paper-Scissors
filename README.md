@@ -1,3 +1,3 @@
 # Rock-Paper-Scissors
 
-This is the first Javascript assignment in the "The Odin Project" Javascript foundatins tutorial. The goal is to program a Rock, Paper, Scissors game. There are a few steps given, but most of the code should be created from scratch without help.
+This is the first Javascript assignment in the "The Odin Project" Javascript foundatins tutorial. The goal is to program a Rock, Paper, Scissors game. There are a few steps given, but most of the code hast to be created from scratch without help. I didnt't just add a best of 5 version as it was assigned, but also one version that ends when one player reaches 3 points first and one more version that ends when a player or the computer is 3 points ahead.
