@@ -51,6 +51,33 @@
                 return "It's a tie!";
             }
         }
+       
+        function game() {
+            let result = 0;
+            for (let i = 0; i < 5; i++) {
+                let roundResult = playRound();
+                console.log(roundResult)
+
+                if (roundResult.slice(0, 8) === "You Win!") {
+                    result = result + 1;
+                } else if (roundResult.slice(0, 9) === "You Lose!") {
+                    result = result -1;
+                } else if (roundResult.slice(0, 11) === "It's a tie!") {
+                } else {
+                    console.log("Something went wrong! :(")
+                };
+            }
+
+            if (result === 0) {
+                console.log("It's a tie! You both have equal points!");
+            } else if (result > 0) {
+                console.log(`You win! You are ${result} points ahead!`);
+            } else if (result < 0) {
+                console.log(`You loose! You are ${result} points behind!`);
+            } else {
+                console.log("Something went wrong! :(")
+            }
+        }
 
     </script>
 </body>
