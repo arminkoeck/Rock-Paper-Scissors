@@ -12,10 +12,24 @@
         function getComputerChoice () {
             const threeChoices = ["Rock", "Paper", "Scissors"];
             let randomChoice = Math.floor(Math.random() * threeChoices.length);
-            let computerChoice = threeChoices[randomChoice];
-            return computerChoice;
+            let computerSelection = threeChoices[randomChoice];
+            return computerSelection;
+        }
+
+        function getPlayerChoice() {
+            let input = prompt("Choose either rock, paper or scissors");
+            let inputFormatted = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+            if (inputFormatted === "Rock" || inputFormatted === "Paper" || inputFormatted === "Scissors") {
+                let playerSelection = inputFormatted;
+                return playerSelection;
+            } else {
+                alert("You can only choose rock, paper or scissors!");
+                return getPlayerChoice();
+            }
         }
         
+        
+
     </script>
 </body>
 </html>
