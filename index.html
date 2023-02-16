@@ -105,7 +105,28 @@
             }
         }
 
-        
+
+        /* This function let's you play until you or the computer first reaches 3 points. Therefore a tie isn't possible */
+
+        function gameAmount() {
+            let win = 0;
+            let lose = 0;
+            for (let i = 0; i < 1000; i++) {
+                let roundResult = playRound();
+                console.log(roundResult)
+
+                if (roundResult.slice(0, 8) === "You Win!") {
+                    win = win + 1;
+                    if (win === 3) {return `You win! You have first reached ${win} points!`}
+                } else if (roundResult.slice(0, 9) === "You Lose!") {
+                    lose = lose + 1;
+                    if (lose === 3) {return `You loose! The enemy has first reached ${lose} points!`}
+                } else if (roundResult.slice(0, 11) === "It's a tie!") {
+                } else {
+                    console.log("Something went wrong! :(")
+                };
+            }
+        }
 
     </script>
 </body>
