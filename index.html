@@ -52,6 +52,9 @@
             }
         }
        
+
+        /* This function let's you play a best of 5. This can end with a win, lose or a tie. */
+
         function game() {
             let result = 0;
             for (let i = 0; i < 5; i++) {
@@ -78,6 +81,31 @@
                 console.log("Something went wrong! :(")
             }
         }
+
+
+        /* This function let's you play until either you or the computer is a specific amount of points ahead.
+        In this verison you win if you're 3 points ahead or loose if you're 3 points behind. A tie is therefore not possible. */
+
+        function gameAhead() {
+            let result = 0;
+            for (let i = 0; i < 1000; i++) {
+                let roundResult = playRound();
+                console.log(roundResult)
+
+                if (roundResult.slice(0, 8) === "You Win!") {
+                    result = result + 1;
+                    if (result === 3) {return `You win! You are ${result} points ahead!`};
+                } else if (roundResult.slice(0, 9) === "You Lose!") {
+                    result = result -1;
+                    if (result === -3) {return `You loose! You are ${-result} points behind!`};
+                } else if (roundResult.slice(0, 11) === "It's a tie!") {
+                } else {
+                    console.log("Something went wrong! :(")
+                };
+            }
+        }
+
+        
 
     </script>
 </body>
